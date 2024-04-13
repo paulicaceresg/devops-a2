@@ -1,7 +1,7 @@
+import unittest
+
 def calculate_area(length, width):
     return length * width
-
-import unittest
 
 class TestRectangleArea(unittest.TestCase):
     
