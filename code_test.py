@@ -19,3 +19,17 @@ class TestRectangleArea(unittest.TestCase):
         
     def test_nonnumeric_inputs(self):
         self.assertRaises(TypeError, calculate_area, 'five', 10) #expected output is TypeError
+
+def main():
+    print("Please choose the input you want for length:")
+    length = float(input())
+    print("Please choose the input you want for width:")
+    width = float(input())
+    try:
+        result = calculate_area(length, width)
+        print("\nThe area of a rectangle with length %.2f and width %.2f is %.2f" %(length, width, result))
+    except TypeError:
+        print("TypeError! Please enter a valid input." )
+
+if __name__ == '__main__':
+    main()
